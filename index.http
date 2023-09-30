@@ -1,0 +1,24 @@
+POST http://localhost:3000/api/cities
+Content-Type: application/json
+
+{
+  "nombre_ciudad": "Guadalajara",
+  "temp_actual": 29,
+  "porcentaje_lluvia": 60,
+  "temp_prox1": 30,
+  "temp_prox2": 32,
+  "temp_prox3": 30,
+  "temp_prox4": 28,
+  "temp_prox5": 26
+}
+
+###
+POST http://localhost:3000/api/cities
+Content-Type: application/json
+[{
+  "id_ciudad":"",
+"nombre_ciudad": "Queretaro",
+}]
+
+###
+GET http://localhost:3000/api/cities/2
