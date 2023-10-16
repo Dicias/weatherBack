@@ -1,10 +1,10 @@
 const mysql = require('mysql')
 
 const conector = mysql.createConnection({
-  host: 'localhost',
-  user: 'dicias',
-  password: '123456',
-  database: 'weather_data'
+  host: process.env.HOST_DB,
+  user: process.env.USER_DB,
+  password: process.env.PSWD_DB,
+  database: process.env.DB
 })
 
 const conectar = () =>{
@@ -42,6 +42,5 @@ const buscarDato = (id) =>{
     })
   })
 }
-
 
 module.exports = {conectar, obtenerDatos, agregarDatos, buscarDato}
